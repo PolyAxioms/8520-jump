@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8520.cc | PolyAxiom 預測市場導航</title>
     <style>
+        /* 基礎樣式 */
         body { 
             background-color: #0d1117; 
             color: #e6edf3; 
@@ -13,27 +14,29 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
         }
 
-        /* Logo 區域 */
+        /* 💡 修正：Logo 區域垂直居中對齊 */
         .logo-section {
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 40px 0 10px;
+            align-items: center; /* 核心修正：垂直對齊 */
+            padding: 50px 0 10px; /* 增加頂部間距 */
             gap: 20px;
         }
         .logo-item {
-            height: 40px;
+            height: 40px; /* 統一高度 */
             display: flex;
-            align-items: center;
+            align-items: center; /* 圖片在容器內垂直居中 */
         }
         .logo-item img {
-            height: 100%;
+            height: 100%; /* 高度撐滿 */
             width: auto;
+            vertical-align: middle; /* 核心修正：消除圖片底部的間隙 */
         }
         .logo-separator {
             color: #30363d;
-            font-size: 24px;
+            font-size: 26px; /* 稍微放大，使其看起來更具設計感 */
             font-weight: 300;
+            line-height: 1; /* 精確垂直對齊 */
         }
 
         .header { text-align: center; padding: 10px 0 20px; }
@@ -68,7 +71,7 @@
             border: 1px solid #30363d; 
             border-radius: 16px; 
             background: #161b22; 
-            height: 320px; 
+            height: 330px; /* 💡 優化：適度增加卡片容器高度，保證穩定加載 */
             overflow: hidden; 
             position: relative; 
             transition: 0.3s ease; 
@@ -133,17 +136,17 @@
         
         <div class="card">
             <a class="click-layer" href="https://polymarket.com/event/presidential-election-winner-2028?r=Axiomcom" target="_blank" rel="noopener"></a>
-            <iframe src="https://embed.polymarket.com/market?event=presidential-election-winner-2028&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&r=Axiomcom&height=300" width="100%" height="100%" frameborder="0"></iframe>
+            <iframe src="https://embed.polymarket.com/market?event=presidential-election-winner-2028&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&r=Axiomcom&height=310" width="100%" height="100%" frameborder="0"></iframe>
         </div>
 
         <div class="card">
             <a class="click-layer" href="https://polymarket.com/event/what-price-will-bitcoin-hit-before-2027?r=Axiomcom" target="_blank" rel="noopener"></a>
-            <iframe src="https://embed.polymarket.com/market?event=what-price-will-bitcoin-hit-before-2027&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&r=Axiomcom&height=300" width="100%" height="100%" frameborder="0"></iframe>
+            <iframe src="https://embed.polymarket.com/market?event=what-price-will-bitcoin-hit-before-2027&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&r=Axiomcom&height=310" width="100%" height="100%" frameborder="0"></iframe>
         </div>
 
         <div class="card">
             <a class="click-layer" href="https://polymarket.com/event/2026-fifa-world-cup-winner-595?r=Axiomcom" target="_blank" rel="noopener"></a>
-            <iframe src="https://embed.polymarket.com/market?event=2026-fifa-world-cup-winner-595&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&r=Axiomcom&height=300" width="100%" height="100%" frameborder="0"></iframe>
+            <iframe src="https://embed.polymarket.com/market?event=2026-fifa-world-cup-winner-595&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&r=Axiomcom&height=310" width="100%" height="100%" frameborder="0"></iframe>
         </div>
 
     </div>
