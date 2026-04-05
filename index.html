@@ -13,7 +13,6 @@
         .header { text-align: center; padding: 5px 0 10px; }
         .header h1 { font-size: 28px; color: #58a6ff; margin: 0; font-weight: 800; letter-spacing: 1px; }
         
-        /* 💡 缩小后的邀请栏 */
         .notice-bar {
             max-width: 700px; margin: 0 auto 15px; padding: 18px;
             background: linear-gradient(145deg, rgba(88, 166, 255, 0.12), rgba(13, 17, 23, 0.95));
@@ -22,7 +21,6 @@
         }
         .notice-bar .main-title { font-size: 18px; font-weight: 700; margin-bottom: 3px; color: #fff; }
         
-        /* 💡 蓝色代码框：支持点击跳转 */
         .code-link { text-decoration: none; display: inline-block; transition: transform 0.2s; }
         .code-link:hover { transform: scale(1.05); }
         .code-box { 
@@ -31,24 +29,30 @@
             font-size: 28px; margin: 10px 0; letter-spacing: 2px;
             box-shadow: 0 0 12px rgba(88, 166, 255, 0.4);
         }
+        
         .instruction { font-size: 14px; color: #e6edf3; font-weight: 500; margin-bottom: 8px; }
+        
         .remedy-guide {
             font-size: 12px; color: #8b949e; background: rgba(255, 255, 255, 0.04);
-            padding: 10px; border-radius: 8px; margin-top: 12px; border: 1px dashed #30363d;
+            padding: 12px; border-radius: 8px; margin-top: 12px; border: 1px dashed #30363d;
             text-align: left; display: inline-block; width: 100%; box-sizing: border-box;
         }
+        .remedy-guide b { color: #58a6ff; }
+        .remedy-guide span { font-size: 11px; display: block; margin-top: 4px; color: #484f58; }
 
         .vpn-warning { 
             max-width: 700px; margin: 0 auto 30px; text-align: center; 
             font-size: 12px; color: #d29922; background: rgba(210, 153, 34, 0.08); 
-            padding: 8px; border-radius: 8px; border: 1px solid rgba(210, 153, 34, 0.15); 
+            padding: 10px; border-radius: 8px; border: 1px solid rgba(210, 153, 34, 0.15); 
         }
+        .vpn-warning span { display: block; margin-top: 4px; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
         .card { border: 1px solid #30363d; border-radius: 16px; background: #161b22; height: 330px; overflow: hidden; position: relative; transition: 0.3s ease; }
         .card:hover { transform: translateY(-5px); border-color: #58a6ff; }
         .click-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; cursor: pointer; }
         iframe { pointer-events: none; }
+        
         .footer { text-align: center; padding: 50px 0 20px; color: #484f58; font-size: 12px; }
         .footer a { color: #484f58; text-decoration: none; border-bottom: 1px dashed #30363d; }
     </style>
@@ -70,15 +74,17 @@
             <div class="code-box">8520</div>
         </a>
 
-        <div class="instruction">點擊上方代碼或下方項目進入註冊</div>
+        <div class="instruction">使用專屬通道進入註冊，即刻享有 <b>20% 手續費折扣</b></div>
         
         <div class="remedy-guide">
-            📌 <b>補救方法：</b>若註冊時漏填，請在 24 小時內前往 <b>Settings -> Referrals</b> 頁面手動輸入 <b>8520</b> 補綁定。
+            📌 <b>補救方法：</b>若註冊時漏填，請在 24 小時內前往 <b>Settings -> Referrals</b> 頁面手動輸入 <b>8520</b> 補綁定。<br>
+            <span>Note: If missed at signup, enter <b>8520</b> in Settings -> Referrals within 24 hours.</span>
         </div>
     </div>
 
     <div class="vpn-warning">
-        ⚠️ 網絡提醒：若內容無法加載請開啟 VPN。註冊時請務必確認代碼已填入。
+        ⚠️ 網絡提醒：若內容無法加載請開啟 VPN。註冊時請務必填寫邀請碼以激活 20% 返現。<br>
+        <span>Note: Use a VPN if content fails to load. Enter referral code to activate 20% discount.</span>
     </div>
 
     <div class="grid">
