@@ -18,16 +18,29 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 50px 0 10px;
+            padding: 40px 0 10px;
             gap: 20px;
         }
         .logo-item { height: 40px; display: flex; align-items: center; }
         .logo-item img { height: 100%; width: auto; vertical-align: middle; }
         .logo-separator { color: #30363d; font-size: 26px; font-weight: 300; line-height: 1; }
 
-        .header { text-align: center; padding: 10px 0 20px; }
+        .header { text-align: center; padding: 10px 0 10px; }
         .header h1 { font-size: 32px; color: #58a6ff; margin: 0; font-weight: 800; letter-spacing: 1px; }
         
+        /* 💡 新增：VPN 網絡提醒樣式 */
+        .vpn-warning {
+            max-width: 900px;
+            margin: 0 auto 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #d29922; /* 醒目的橘黃色 */
+            background: rgba(210, 153, 34, 0.1);
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(210, 153, 34, 0.2);
+        }
+
         /* 邀請橫條 */
         .notice-bar {
             max-width: 900px;
@@ -99,13 +112,17 @@
 
     <div class="header"><h1>8520.cc</h1></div>
 
+    <div class="vpn-warning">
+        ⚠️ 提醒：如果下方內容無法預覽，請開啟 VPN 訪問。<br>
+        Note: If the content below fails to load, please use a VPN.
+    </div>
+
     <div class="notice-bar">
         <span class="zh">💡 <b>官方推薦：</b>使用邀請碼 <a href="https://polymarket.com/?r=Axiomcom" target="_blank">8520</a> 專屬通道進入，即刻享有 <b>20% 手續費折扣</b></span>
         <span class="en">Official Invite: Join via Referral Code <b>8520</b> to enjoy a <b>20% Trading Fee Discount</b></span>
     </div>
 
     <div class="grid">
-        
         <div class="card">
             <a class="click-layer" href="https://polymarket.com/event/presidential-election-winner-2028?r=Axiomcom" target="_blank"></a>
             <iframe src="https://embed.polymarket.com/market?event=presidential-election-winner-2028&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&r=Axiomcom&height=310" width="100%" height="100%" frameborder="0"></iframe>
@@ -120,7 +137,6 @@
             <a class="click-layer" href="https://polymarket.com/event/2026-fifa-world-cup-winner-595?r=Axiomcom" target="_blank"></a>
             <iframe src="https://embed.polymarket.com/market?event=2026-fifa-world-cup-winner-595&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&r=Axiomcom&height=310" width="100%" height="100%" frameborder="0"></iframe>
         </div>
-
     </div>
 
     <div class="footer">
