@@ -13,11 +13,9 @@
         .header { text-align: center; padding: 10px 0 10px; }
         .header h1 { font-size: 32px; color: #58a6ff; margin: 0; font-weight: 800; letter-spacing: 1px; }
         
-        .vpn-warning { max-width: 900px; margin: 0 auto 15px; text-align: center; font-size: 13px; color: #d29922; background: rgba(210, 153, 34, 0.1); padding: 10px; border-radius: 8px; border: 1px solid rgba(210, 153, 34, 0.2); }
-
-        /* 💡 邀請欄優化：增加補救指南 */
+        /* 💡 核心引导栏 */
         .notice-bar {
-            max-width: 900px; margin: 0 auto 35px; padding: 25px;
+            max-width: 900px; margin: 0 auto 15px; padding: 25px;
             background: linear-gradient(145deg, rgba(88, 166, 255, 0.15), rgba(13, 17, 23, 0.9));
             border: 2px solid #58a6ff; border-radius: 16px;
             text-align: center; line-height: 1.6;
@@ -29,15 +27,19 @@
             font-size: 32px; margin: 15px 0; letter-spacing: 3px;
             box-shadow: 0 0 15px rgba(88, 166, 255, 0.5);
         }
-        .notice-bar .instruction { font-size: 16px; color: #e6edf3; font-weight: 500; margin-bottom: 10px; }
         
-        /* 💡 新增：補救指南樣式 */
+        /* 💡 VPN 提醒（现在位于下方） */
+        .vpn-warning { 
+            max-width: 900px; margin: 0 auto 35px; text-align: center; 
+            font-size: 13px; color: #d29922; background: rgba(210, 153, 34, 0.1); 
+            padding: 10px; border-radius: 8px; border: 1px solid rgba(210, 153, 34, 0.2); 
+        }
+
         .remedy-guide {
             font-size: 13px; color: #8b949e; background: rgba(255, 255, 255, 0.05);
             padding: 12px; border-radius: 8px; margin-top: 15px; border: 1px dashed #30363d;
             text-align: left; display: inline-block; width: 100%; box-sizing: border-box;
         }
-        .remedy-guide b { color: #58a6ff; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 24px; max-width: 1300px; margin: 0 auto; }
         .card { border: 1px solid #30363d; border-radius: 16px; background: #161b22; height: 335px; overflow: hidden; position: relative; transition: 0.3s ease; }
@@ -59,19 +61,20 @@
 
     <div class="header"><h1>8520.cc</h1></div>
 
-    <div class="vpn-warning">
-        ⚠️ 網絡提醒：若內容無法加載請開啟 VPN。註冊時請務必填寫邀請碼。
-    </div>
-
     <div class="notice-bar">
         <div class="main-title">🎁 官方專屬邀請碼</div>
         <div class="code-box">8520</div>
-        <div class="instruction">註冊時手動填寫上述代碼，即刻激活 20% 返現</div>
+        <div style="font-size: 16px; font-weight: 500;">註冊時手動填寫上述代碼，即刻激活 20% 返現</div>
         
         <div class="remedy-guide">
             📌 <b>補救方法：</b>若註冊時漏填，請在 24 小時內前往 <b>Settings -> Referrals</b> 頁面手動輸入 <b>8520</b> 補綁定。<br>
             <span style="font-size: 11px;">Note: If missed at signup, enter <b>8520</b> in Settings -> Referrals within 24 hours.</span>
         </div>
+    </div>
+
+    <div class="vpn-warning">
+        ⚠️ 網絡提醒：若內容無法加載請開啟 VPN。註冊時請務必填寫邀請碼。<br>
+        Note: Use a VPN if content fails to load. Enter referral code to activate 20% discount.
     </div>
 
     <div class="grid">
