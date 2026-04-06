@@ -16,7 +16,6 @@
         .header { text-align: center; padding: 5px 0 10px; }
         .header h1 { font-size: 28px; color: #58a6ff; margin: 0; font-weight: 800; }
         
-        /* 核心 notice-bar (不亂改) */
         .notice-bar {
             max-width: 700px; margin: 0 auto 15px; padding: 18px;
             background: linear-gradient(145deg, rgba(88, 166, 255, 0.12), rgba(13, 17, 23, 0.95));
@@ -30,38 +29,16 @@
             background: rgba(210, 153, 34, 0.08); padding: 10px; border-radius: 8px; border: 1px solid rgba(210, 153, 34, 0.15); 
         }
 
-        /* --- Grid & Card 移動端優化 --- */
-        .grid { 
-            display: grid; 
-            /* 調整 minmax，適應小屏幕 */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 20px; max-width: 1200px; margin: 0 auto; 
-        }
-        .card { 
-            border: 1px solid #30363d; border-radius: 16px; background: #161b22; 
-            /* 移除固定高度，讓內容決定 */
-            min-height: 330px; 
-            overflow: hidden; position: relative; transition: 0.3s ease; 
-            display: flex; justify-content: center; align-items: center; 
-            box-sizing: border-box; /* 重要：防止 padding 撐破卡片 */
-        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .card { border: 1px solid #30363d; border-radius: 16px; background: #161b22; min-height: 330px; overflow: hidden; position: relative; transition: 0.3s ease; display: flex; justify-content: center; align-items: center; box-sizing: border-box; }
         .card:hover { transform: translateY(-5px); border-color: #58a6ff; }
         
-        /* 確保 figure 組件在卡片內不超出 */
-        .polymarket-embed {
-            width: 100%;
-            height: auto;
-            text-align: center;
-        }
-
-        /* 核心修改：iframe 寬度自適應 100% */
-        .polymarket-embed iframe {
-            width: 100% !important; /* 強制覆蓋原生 width="400" */
-            max-width: 400px; /* 限制最大寬度，保持原有比例 */
-            height: 300px;
-        }
+        .polymarket-embed { width: 100%; height: auto; text-align: center; }
+        .polymarket-embed iframe { width: 100% !important; max-width: 400px; height: 300px; }
 
         .footer { text-align: center; padding: 50px 0 20px; color: #484f58; font-size: 12px; }
+        /* 修正頁腳鏈接顏色 */
+        .footer a { color: #484f58; text-decoration: none; border-bottom: 1px dashed #30363d; }
     </style>
 </head>
 <body>
@@ -76,13 +53,10 @@
 
     <div class="notice-bar">
         <div class="main-title">🎁 官方專屬邀請碼</div>
-        <a href="https://polymarket.com/?r=Axiomcom" target="_blank" class="code-link" title="點擊領取折扣及體驗金">
+        <a href="https://polymarket.com/?r=Axiomcom" target="_blank" class="code-link">
             <div class="code-box">8520</div>
         </a>
         <div class="instruction">使用專屬通道進入註冊，即刻享有 <b>20% 手續費折扣或體驗金贈送</b></div>
-        <div class="remedy-guide">
-            📌 <b>補救方法：</b>Settings -> Referrals 手動輸入 <b>8520</b>。
-        </div>
     </div>
 
     <div class="vpn-warning">
@@ -91,29 +65,30 @@
 
     <main class="grid">
         <article class="card">
-            <figure class="polymarket-embed" id="polymarket-will-jd-vance-win-the-2028-us-presidential-election" aria-label="JD Vance" style="position:relative;display:inline-block;margin:0">
-                <iframe title="JD Vance 2028" src="https://embed.polymarket.com/market?event=presidential-election-winner-2028&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300" width="100%" height="300" frameborder="0" allowtransparency="true"></iframe>
-                <a href="https://polymarket.com/event/presidential-election-winner-2028" target="_blank" rel="noopener" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
+            <figure class="polymarket-embed" style="position:relative;display:inline-block;margin:0">
+                <iframe src="https://embed.polymarket.com/market?event=presidential-election-winner-2028&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300" width="100%" height="300" frameborder="0" allowtransparency="true"></iframe>
+                <a href="https://polymarket.com/event/presidential-election-winner-2028?r=Axiomcom" target="_blank" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
             </figure>
         </article>
 
         <article class="card">
-            <figure class="polymarket-embed" id="polymarket-will-bitcoin-reach-1000000-by-december-31-2026-946" aria-label="Bitcoin" style="position:relative;display:inline-block;margin:0">
-                <iframe title="Bitcoin 1M" src="https://embed.polymarket.com/market?market=will-bitcoin-reach-1000000-by-december-31-2026-946&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300" width="100%" height="300" frameborder="0" allowtransparency="true"></iframe>
-                <a href="https://polymarket.com/event/what-price-will-bitcoin-hit-before-2027" target="_blank" rel="noopener" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
+            <figure class="polymarket-embed" style="position:relative;display:inline-block;margin:0">
+                <iframe src="https://embed.polymarket.com/market?market=will-bitcoin-reach-1000000-by-december-31-2026-946&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300" width="100%" height="300" frameborder="0" allowtransparency="true"></iframe>
+                <a href="https://polymarket.com/event/what-price-will-bitcoin-hit-before-2027?r=Axiomcom" target="_blank" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
             </figure>
         </article>
 
         <article class="card">
-            <figure class="polymarket-embed" id="polymarket-will-spain-win-the-2026-fifa-world-cup-963" aria-label="Spain" style="position:relative;display:inline-block;margin:0">
-                <iframe title="Spain World Cup" src="https://embed.polymarket.com/market?event=2026-fifa-world-cup-winner-595&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300" width="100%" height="300" frameborder="0" allowtransparency="true"></iframe>
-                <a href="https://polymarket.com/event/2026-fifa-world-cup-winner-595" target="_blank" rel="noopener" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
+            <figure class="polymarket-embed" style="position:relative;display:inline-block;margin:0">
+                <iframe src="https://embed.polymarket.com/market?event=2026-fifa-world-cup-winner-595&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300" width="100%" height="300" frameborder="0" allowtransparency="true"></iframe>
+                <a href="https://polymarket.com/event/2026-fifa-world-cup-winner-595?r=Axiomcom" target="_blank" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
             </figure>
         </article>
     </main>
 
     <footer class="footer">
-        &copy; 2026 <a href="https://polyaxiom.com" target="_blank">PolyAxiom</a>. Data Powered by <a href="https://polymarket.com" target="_blank">Polymarket API</a>.
+        &copy; 2026 <a href="https://polyaxiom.com" target="_blank">PolyAxiom</a>. 
+        Data Powered by <a href="https://polymarket.com/?r=Axiomcom" target="_blank">Polymarket API</a>.
     </footer>
 
 </body>
