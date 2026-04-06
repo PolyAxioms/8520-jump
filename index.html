@@ -6,40 +6,83 @@
     <title>8520.cc | PolyAxiom 預測市場導航 - Polymarket 專業數據終端</title>
     <meta name="description" content="8520.cc 是 PolyAxiom 旗下的專業預測市場導航門戶。提供實時數據、2028 美國大選、比特幣價格預測。使用邀請碼 8520 獲取 20% 手續費折扣或體驗金贈送。">
     <meta name="keywords" content="Polymarket, PolyAxiom, 8520.cc, 預測市場, 加密貨幣預測, 2028美國大選, 體驗金贈送, 手續費折扣">
+    
     <style>
         body { background-color: #0d1117; color: #e6edf3; margin: 0; padding: 20px; font-family: -apple-system, sans-serif; }
         .logo-section { display: flex; justify-content: center; align-items: center; padding: 30px 0 10px; gap: 15px; }
         .logo-item { height: 35px; display: flex; align-items: center; }
-        .logo-item img { height: 100%; width: auto; }
+        .logo-item img { height: 100%; width: auto; vertical-align: middle; }
         .header { text-align: center; padding: 5px 0 10px; }
-        .header h1 { font-size: 28px; color: #58a6ff; margin: 0; font-weight: 800; }
-        .notice-bar { max-width: 700px; margin: 0 auto 15px; padding: 18px; background: linear-gradient(145deg, rgba(88, 166, 255, 0.12), rgba(13, 17, 23, 0.95)); border: 1.5px solid #58a6ff; border-radius: 14px; text-align: center; line-height: 1.5; }
-        .code-box { background: #58a6ff; color: #0d1117; padding: 4px 18px; border-radius: 6px; font-weight: 900; font-size: 28px; margin: 10px 0; letter-spacing: 2px; display: inline-block; }
-        .vpn-warning { max-width: 700px; margin: 0 auto 30px; text-align: center; font-size: 12px; color: #d29922; background: rgba(210, 153, 34, 0.08); padding: 10px; border-radius: 8px; border: 1px solid rgba(210, 153, 34, 0.15); }
+        .header h1 { font-size: 28px; color: #58a6ff; margin: 0; font-weight: 800; letter-spacing: 1px; }
+        
+        .notice-bar {
+            max-width: 700px; margin: 0 auto 15px; padding: 18px;
+            background: linear-gradient(145deg, rgba(88, 166, 255, 0.12), rgba(13, 17, 23, 0.95));
+            border: 1.5px solid #58a6ff; border-radius: 14px;
+            text-align: center; line-height: 1.5;
+        }
+        .code-box { 
+            background: #58a6ff; color: #0d1117; 
+            padding: 4px 18px; border-radius: 6px; font-weight: 900; 
+            font-size: 28px; margin: 10px 0; letter-spacing: 2px;
+            display: inline-block; box-shadow: 0 0 12px rgba(88, 166, 255, 0.4);
+        }
+        /* 補救措施樣式 - 確保它在藍色框內 */
+        .remedy-guide {
+            font-size: 12px; color: #8b949e; background: rgba(255, 255, 255, 0.04);
+            padding: 12px; border-radius: 8px; margin-top: 12px; border: 1px dashed #30363d;
+            text-align: left; display: inline-block; width: 100%; box-sizing: border-box;
+        }
+        .remedy-guide b { color: #58a6ff; }
+        .remedy-guide span { font-size: 11px; display: block; margin-top: 4px; color: #484f58; }
+
+        .vpn-warning { 
+            max-width: 700px; margin: 0 auto 30px; text-align: center; 
+            font-size: 12px; color: #d29922; background: rgba(210, 153, 34, 0.08); 
+            padding: 10px; border-radius: 8px; border: 1px solid rgba(210, 153, 34, 0.15); 
+        }
+        .vpn-warning span { display: block; margin-top: 4px; }
+
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
         .card { border: 1px solid #30363d; border-radius: 16px; background: #161b22; min-height: 330px; overflow: hidden; position: relative; transition: 0.3s ease; display: flex; justify-content: center; align-items: center; }
-        .card:hover { border-color: #58a6ff; transform: translateY(-2px); }
+        .card:hover { border-color: #58a6ff; transform: translateY(-5px); }
+        
         .polymarket-embed { width: 100%; height: auto; text-align: center; }
         .polymarket-embed iframe { width: 100% !important; max-width: 400px; height: 300px; border: none; }
+
         .footer { text-align: center; padding: 50px 0 20px; color: #484f58; font-size: 12px; }
         .footer a { color: #484f58; text-decoration: none; border-bottom: 1px dashed #30363d; }
     </style>
 </head>
 <body>
+
     <div class="logo-section">
         <div class="logo-item"><img src="my-logo.png" alt="PolyAxiom terminal"></div>
         <div style="color: #30363d; font-size: 22px;">×</div>
         <div class="logo-item"><img src="polymarket-logo.png" alt="Polymarket"></div>
     </div>
+
     <header class="header"><h1>8520.cc</h1></header>
+
     <div class="notice-bar">
         <div style="font-size: 18px; font-weight: 700; color: #fff;">🎁 官方專屬邀請碼</div>
         <a href="https://polymarket.com/?r=Axiomcom" target="_blank" style="text-decoration: none;">
             <div class="code-box">8520</div>
         </a>
-        <div style="font-size: 14px; margin-top: 8px;">使用專屬通道進入註冊，即刻享有 <b>20% 手續費折扣或體驗金贈送</b></div>
+        <div style="font-size: 14px; color: #e6edf3; font-weight: 500; margin-top: 8px;">
+            使用專屬通道進入註冊，即刻享有 <b>20% 手續費折扣或體驗金贈送</b>
+        </div>
+        <div class="remedy-guide">
+            📌 <b>補救方法：</b>若註冊時漏填，請在 24 小時內前往 <b>Settings -> Referrals</b> 頁面手動輸入 <b>8520</b> 補綁定。<br>
+            <span>Note: If missed at signup, enter <b>8520</b> in Settings -> Referrals within 24 hours.</span>
+        </div>
     </div>
-    <div class="vpn-warning">⚠️ 網絡提醒：若內容無法加載請開啟 VPN。註冊時請務必確認代碼已填入以激活 <b>20% 返現或體驗金權益</b>。</div>
+
+    <div class="vpn-warning">
+        ⚠️ 網絡提醒：若內容無法加載請開啟 VPN。註冊時請務必確認代碼已填入以激活 <b>20% 返現或體驗金權益</b>。<br>
+        <span>Note: Use a VPN if content fails to load. Enter referral code to activate 20% discount or bonus.</span>
+    </div>
+
     <main class="grid">
         <article class="card">
             <figure class="polymarket-embed" style="position:relative;margin:0">
@@ -60,8 +103,10 @@
             </figure>
         </article>
     </main>
+
     <footer class="footer">
-        &copy; 2026 <a href="https://polyaxiom.com" target="_blank">PolyAxiom</a>. Data Powered by <a href="https://polymarket.com/?r=Axiomcom" target="_blank">Polymarket API</a>.
+        &copy; 2026 <a href="https://polyaxiom.com" target="_blank">PolyAxiom</a>. 
+        Data Powered by <a href="https://polymarket.com/?r=Axiomcom" target="_blank">Polymarket API</a>.
     </footer>
 </body>
 </html>
