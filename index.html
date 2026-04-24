@@ -82,9 +82,7 @@
         <span>Note: Use a VPN if content fails to load. Enter referral code to activate 20% discount or bonus.</span>
     </div>
 
-    <main class="grid" id="project-list-container">
-        <div style="text-align: center; color: #484f58; padding: 50px;">載入中...</div>
-    </main>
+    <main class="grid" id="project-display-zone"></main>
 
     <footer class="footer">
         &copy; 2026 <a href="https://polyaxiom.com" target="_blank">PolyAxiom</a>. 
@@ -92,16 +90,15 @@
     </footer>
 
     <script>
+        // 核心加載腳本
         fetch('projects/list.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('project-list-container').innerHTML = data;
+                document.getElementById('project-display-zone').innerHTML = data;
             })
-            .catch(err => {
-                document.getElementById('project-list-container').innerHTML = '<div style="color:#d29922">暫無推薦項目</div>';
-            });
+            .catch(err => console.error('项目加载失败:', err));
     </script>
 
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ad6ac2df8ee64b88941105758a118c6c"}'></script>
-    </body>
+</body>
 </html>
