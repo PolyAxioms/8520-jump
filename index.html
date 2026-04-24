@@ -27,7 +27,6 @@
             font-size: 28px; margin: 10px 0; letter-spacing: 2px;
             display: inline-block; box-shadow: 0 0 12px rgba(88, 166, 255, 0.4);
         }
-        /* 補救措施樣式 - 確保它在藍色框內 */
         .remedy-guide {
             font-size: 12px; color: #8b949e; background: rgba(255, 255, 255, 0.04);
             padding: 12px; border-radius: 8px; margin-top: 12px; border: 1px dashed #30363d;
@@ -83,50 +82,25 @@
         <span>Note: Use a VPN if content fails to load. Enter referral code to activate 20% discount or bonus.</span>
     </div>
 
-    <main class="grid">
-        <article class="card">
-            <figure class="polymarket-embed" style="position:relative;margin:0">
-                <iframe src="https://embed.polymarket.com/market?event=presidential-election-winner-2028&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300"></iframe>
-                <a href="https://polymarket.com/event/presidential-election-winner-2028?r=Axiomcom" target="_blank" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
-            </figure>
-        </article>
-        <article class="card">
-            <figure class="polymarket-embed" style="position:relative;margin:0">
-                <iframe src="https://embed.polymarket.com/market?market=will-bitcoin-reach-1000000-by-december-31-2026-946&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300"></iframe>
-                <a href="https://polymarket.com/event/what-price-will-bitcoin-hit-before-2027?r=Axiomcom" target="_blank" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
-            </figure>
-        </article>
-        <article class="card">
-            <figure class="polymarket-embed" style="position:relative;margin:0">
-                <iframe src="https://embed.polymarket.com/market?event=2026-fifa-world-cup-winner-595&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300"></iframe>
-                <a href="https://polymarket.com/event/2026-fifa-world-cup-winner-595?r=Axiomcom" target="_blank" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
-            </figure>
-        </article>
-
-        <article class="card">
-            <figure class="polymarket-embed" style="position:relative;margin:0">
-                <iframe src="https://embed.polymarket.com/market?event=richest-person-on-december-31-2026&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300"></iframe>
-                <a href="https://polymarket.com/event/richest-person-on-december-31-2026?r=Axiomcom" target="_blank" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
-            </figure>
-        </article>
-        <article class="card">
-            <figure class="polymarket-embed" style="position:relative;margin:0">
-                <iframe src="https://embed.polymarket.com/market?event=largest-ipo-by-market-cap-in-2026-287&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300"></iframe>
-                <a href="https://polymarket.com/event/largest-ipo-by-market-cap-in-2026-287?r=Axiomcom" target="_blank" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
-            </figure>
-        </article>
-        <article class="card">
-            <figure class="polymarket-embed" style="position:relative;margin:0">
-                <iframe src="https://embed.polymarket.com/market?event=how-many-fed-rate-cuts-in-2026&rotate=true&theme=dark&liveactivity=true&border=true&creator=Axiomcom&height=300"></iframe>
-                <a href="https://polymarket.com/event/how-many-fed-rate-cuts-in-2026?r=Axiomcom" target="_blank" style="position:absolute;top:16px;right:20px;width:120px;height:24px;z-index:10"></a>
-            </figure>
-        </article>
+    <main class="grid" id="project-list-container">
+        <div style="text-align: center; color: #484f58; padding: 50px;">載入中...</div>
     </main>
 
     <footer class="footer">
         &copy; 2026 <a href="https://polyaxiom.com" target="_blank">PolyAxiom</a>. 
         Data Powered by <a href="https://polymarket.com/?r=Axiomcom" target="_blank">Polymarket API</a>.
     </footer>
+
+    <script>
+        fetch('projects/list.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('project-list-container').innerHTML = data;
+            })
+            .catch(err => {
+                document.getElementById('project-list-container').innerHTML = '<div style="color:#d29922">暫無推薦項目</div>';
+            });
+    </script>
 
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ad6ac2df8ee64b88941105758a118c6c"}'></script>
     </body>
